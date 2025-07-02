@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
 import { SmoothScroll } from "@/components/smooth-scroll"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { Logo } from "@/components/logo"
 import {
   Phone,
   Mail,
@@ -38,11 +39,8 @@ export default function AvicenaPlusWebsite() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="bg-blue-600 p-2 rounded-lg">
-                <Pill className="h-8 w-8 text-white" />
-              </div>
+              <Logo />
               <div>
-                <h1 className="text-2xl font-bold text-blue-900">AvicenaPlus</h1>
                 <p className="text-sm text-green-600">25 godina poverenja</p>
               </div>
             </div>
