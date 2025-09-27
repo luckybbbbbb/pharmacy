@@ -93,7 +93,7 @@ export default function AvicenaPlusWebsite() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800">
+                <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100 dark:bg-blue-900 dark:text-slate-300 dark:hover:bg-blue-800">
                   <Award className="h-4 w-4 mr-2" />
                   25 godina profesionalne usluge
                 </Badge>
@@ -136,7 +136,7 @@ export default function AvicenaPlusWebsite() {
                 autoPlayInterval={4000}
                 className="w-full max-w-lg mx-auto"
               />
-              
+              y
             </div>
           </div>
         </div>
@@ -529,7 +529,7 @@ export default function AvicenaPlusWebsite() {
 
 
       {/* Footer */}
-      <footer className="bg-blue-900 text-white py-12">
+      <footer className="bg-slate-800 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
@@ -539,10 +539,10 @@ export default function AvicenaPlusWebsite() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold">AvicenaPlus</h3>
-                  <p className="text-blue-200 text-sm">25 godina poverenja</p>
+                  <p className="text-slate-300 text-sm">25 godina poverenja</p>
                 </div>
               </div>
-              <p className="text-blue-200">
+              <p className="text-slate-300">
                 Vaš pouzdan zdravstveni partner u Novom Pazaru, pružamo profesionalnu farmaceutsku negu od 1999. godine.
               </p>
               <div className="flex items-center space-x-2">
@@ -559,7 +559,7 @@ export default function AvicenaPlusWebsite() {
 
             <div>
               <h4 className="font-bold mb-4">Brzi linkovi</h4>
-              <ul className="space-y-2 text-blue-200">
+              <ul className="space-y-2 text-slate-300">
                 <li>
                   <Link href="#o-nama" className="hover:text-white">
                     O nama
@@ -585,7 +585,7 @@ export default function AvicenaPlusWebsite() {
 
             <div>
               <h4 className="font-bold mb-4">Usluge</h4>
-              <ul className="space-y-2 text-blue-200">
+              <ul className="space-y-2 text-slate-300">
                 <li>Usluge na recept</li>
                 <li>Zdravstvene konsultacije</li>
                 <li>Upravljanje lekovima</li>
@@ -595,7 +595,7 @@ export default function AvicenaPlusWebsite() {
 
             <div>
               <h4 className="font-bold mb-4">Kontakt informacije</h4>
-              <div className="space-y-2 text-blue-200">
+              <div className="space-y-2 text-slate-300">
                 <p className="flex items-center">
                   <Phone className="h-4 w-4 mr-2" />
                   +381 20 123-456
@@ -616,7 +616,7 @@ export default function AvicenaPlusWebsite() {
             </div>
           </div>
 
-          <div className="border-t border-blue-800 mt-8 pt-8 text-center text-blue-200">
+          <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-300">
             <p>&copy; {new Date().getFullYear()} AvicenaPlus. Sva prava zadržana. | Licencirana apoteka u Srbiji</p>
           </div>
         </div>
