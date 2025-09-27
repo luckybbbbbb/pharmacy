@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { SmoothScroll } from "@/components/smooth-scroll"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Logo } from "@/components/logo"
+import { PharmacySlideshow } from "@/components/pharmacy-slideshow"
 import {
   Phone,
   Mail,
@@ -30,6 +31,15 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function AvicenaPlusWebsite() {
+  // WhatsApp slike apoteke
+  const pharmacyImages = [
+    "/WhatsApp Image 2025-09-27 at 16.09.02 (1).jpeg",
+    "/WhatsApp Image 2025-09-27 at 16.09.02.jpeg", 
+    "/WhatsApp Image 2025-09-27 at 16.09.04.jpeg",
+    "/WhatsApp Image 2025-09-27 at 16.09.06.jpeg",
+    "/WhatsApp Image 2025-09-27 at 16.09.08.jpeg"
+  ]
+
   return (
     <div className="min-h-screen bg-background">
       <SmoothScroll />
@@ -103,14 +113,6 @@ export default function AvicenaPlusWebsite() {
                     Pridruži se Loyalty programu
                   </Link>
                 </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-blue-600 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950 px-8 py-4 text-lg bg-transparent"
-                >
-                  <Phone className="h-5 w-5 mr-2" />
-                  Pozovi sada
-                </Button>
               </div>
               <div className="flex items-center space-x-8 pt-4">
                 <div className="text-center">
@@ -128,24 +130,13 @@ export default function AvicenaPlusWebsite() {
               </div>
             </div>
             <div className="relative">
-              <Image
-                src="/placeholder.svg?height=600&width=500"
-                alt="Profesionalna apoteka"
-                width={500}
-                height={600}
-                className="rounded-2xl shadow-2xl"
+              <PharmacySlideshow 
+                images={pharmacyImages}
+                autoPlay={true}
+                autoPlayInterval={4000}
+                className="w-full max-w-lg mx-auto"
               />
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
-                <div className="flex items-center space-x-3">
-                  <div className="bg-green-100 p-3 rounded-full">
-                    <Shield className="h-6 w-6 text-green-600" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-blue-900">Licencirani i sertifikovani</div>
-                    <div className="text-sm text-gray-600">Profesionalni farmaceuti</div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -246,26 +237,6 @@ export default function AvicenaPlusWebsite() {
                   <div>
                     <h3 className="font-semibold text-lg">Bonus poeni</h3>
                     <p className="text-green-100">Zarađujte poene na svakoj kupovini</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <div className="bg-white/20 p-2 rounded-lg">
-                    <UserCheck className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg">Prioritetna usluga</h3>
-                    <p className="text-green-100">Preskočite red sa ekspresnom uslugom</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-3">
-                  <div className="bg-white/20 p-2 rounded-lg">
-                    <Calendar className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg">Zdravstveni podsetnici</h3>
-                    <p className="text-green-100">Obaveštenja o lekovima i pregledima</p>
                   </div>
                 </div>
               </div>
@@ -555,86 +526,7 @@ export default function AvicenaPlusWebsite() {
         </div>
       </section>
 
-      {/* Health Tips Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-blue-900 mb-4">Zdravstveni saveti i vesti</h2>
-            <p className="text-xl text-gray-600">Budite informisani sa najnovijim zdravstvenim informacijama</p>
-          </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-blue-100 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Image
-                  src="/placeholder.svg?height=200&width=400"
-                  alt="Zimski zdravstveni saveti"
-                  width={400}
-                  height={200}
-                  className="rounded-lg mb-4"
-                />
-                <CardTitle className="text-blue-900">Zimski zdravstveni saveti</CardTitle>
-                <CardDescription>15. decembar 2024.</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Osnovni saveti za održavanje zdravlja tokom zimskih meseci, uključujući podršku imunskom sistemu i
-                  strategije prevencije prehlade.
-                </p>
-                <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 bg-transparent">
-                  Pročitaj više
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-green-100 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Image
-                  src="/placeholder.svg?height=200&width=400"
-                  alt="Bezbednost lekova"
-                  width={400}
-                  height={200}
-                  className="rounded-lg mb-4"
-                />
-                <CardTitle className="text-green-600">Bezbednost lekova</CardTitle>
-                <CardDescription>10. decembar 2024.</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Važne smernice za bezbedno čuvanje lekova, pravilno doziranje i izbegavanje opasnih interakcija između
-                  lekova.
-                </p>
-                <Button variant="outline" className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent">
-                  Pročitaj više
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-blue-100 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <Image
-                  src="/placeholder.svg?height=200&width=400"
-                  alt="Upravljanje dijabetesom"
-                  width={400}
-                  height={200}
-                  className="rounded-lg mb-4"
-                />
-                <CardTitle className="text-blue-900">Upravljanje dijabetesom</CardTitle>
-                <CardDescription>5. decembar 2024.</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Sveobuhvatan vodič za efikasno upravljanje dijabetesom, uključujući savete o ishrani, tehnike praćenja
-                  i pridržavanje lekova.
-                </p>
-                <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 bg-transparent">
-                  Pročitaj više
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-blue-900 text-white py-12">
