@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -19,30 +19,47 @@ export function PharmacySlideshow({
   className = ""
 }: PharmacySlideshowProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
-  // Auto-play functionality
-  useEffect(() => {
+  const startAutoPlay = () => {
     if (!autoPlay || images.length <= 1) return
 
-    const interval = setInterval(() => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current)
+    }
+
+    intervalRef.current = setInterval(() => {
       setCurrentIndex((prevIndex) => 
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       )
     }, autoPlayInterval)
+  }
 
-    return () => clearInterval(interval)
+  const stopAutoPlay = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current)
+      intervalRef.current = null
+    }
+  }
+
+  useEffect(() => {
+    startAutoPlay()
+    return () => stopAutoPlay()
   }, [autoPlay, autoPlayInterval, images.length])
 
   const goToPrevious = () => {
     setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1)
+    startAutoPlay()
   }
 
   const goToNext = () => {
     setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1)
+    startAutoPlay()
   }
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index)
+    startAutoPlay()
   }
 
   if (images.length === 0) {
@@ -54,7 +71,11 @@ export function PharmacySlideshow({
   }
 
   return (
-    <div className={`relative group ${className}`}>
+    <div 
+      className={`relative group ${className}`}
+      onMouseEnter={stopAutoPlay}
+      onMouseLeave={startAutoPlay}
+    >
       {/* Main Image */}
       <div className="relative overflow-hidden rounded-2xl shadow-2xl w-full h-[400px] sm:h-[500px] lg:h-[600px]">
         <Image
