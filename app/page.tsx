@@ -136,7 +136,6 @@ export default function AvicenaPlusWebsite() {
                 autoPlayInterval={4000}
                 className="w-full max-w-lg mx-auto"
               />
-              y
             </div>
           </div>
         </div>
