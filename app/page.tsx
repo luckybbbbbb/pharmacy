@@ -214,7 +214,7 @@ export default function AvicenaPlusWebsite() {
                 </h2>
                 <p className="text-xl text-green-100">
                   Pridružite se hiljadama zadovoljnih kupaca i počnite da štedite na svakoj kupovini dok dobijate
-                  ekskluzivne zdravstvene pogodnosti i personalizovanu negu.
+                  ekskluzivne zdravstvene pogodnosti.
                 </p>
               </div>
 
@@ -361,15 +361,14 @@ export default function AvicenaPlusWebsite() {
               <CardHeader>
                 <CardTitle className="text-blue-900 flex items-center">
                   <MapPin className="h-5 w-5 mr-2 text-green-600" />
-                  AvicenaPlus Centar
+                  AvicenaPlus Stara Iskra
                 </CardTitle>
-                <CardDescription>Glavna lokacija</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <MapPin className="h-5 w-5 text-green-600 mt-1" />
                   <div>
-                    <p className="font-semibold">Trg Slobode 15</p>
+                    <p className="font-semibold">Generala Zivkovića</p>
                     <p className="text-gray-600">36300 Novi Pazar, Srbija</p>
                   </div>
                 </div>
@@ -403,15 +402,14 @@ export default function AvicenaPlusWebsite() {
               <CardHeader>
                 <CardTitle className="text-blue-900 flex items-center">
                   <MapPin className="h-5 w-5 mr-2 text-green-600" />
-                  AvicenaPlus Express
+                  AvicenaPlus Mur
                 </CardTitle>
-                <CardDescription>Druga lokacija</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <MapPin className="h-5 w-5 text-green-600 mt-1" />
                   <div>
-                    <p className="font-semibold">Ulica Stevana Nemanje 42</p>
+                    <p className="font-semibold">Mur br. 279</p>
                     <p className="text-gray-600">36300 Novi Pazar, Srbija</p>
                   </div>
                 </div>
@@ -544,16 +542,6 @@ export default function AvicenaPlusWebsite() {
               <p className="text-slate-300">
                 Vaš pouzdan zdravstveni partner u Novom Pazaru, pružamo profesionalnu farmaceutsku negu od 1999. godine.
               </p>
-              <div className="flex items-center space-x-2">
-                <Link
-                  href="https://www.instagram.com/avicenaplus/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-pink-600 p-2 rounded-lg hover:bg-pink-700 transition-colors"
-                >
-                  <Instagram className="h-5 w-5 text-white" />
-                </Link>
-              </div>
             </div>
 
             <div>
@@ -605,12 +593,17 @@ export default function AvicenaPlusWebsite() {
                 </p>
                 <p className="flex items-start">
                   <MapPin className="h-4 w-4 mr-2 mt-1" />
-                  Trg Slobode 15, Novi Pazar
+                  Mur br. 279, Novi Pazar
                 </p>
-                <p className="flex items-center">
+                <a
+                  href="https://instagram.com/avicenaplus"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center hover:text-white transition-colors"
+                >
                   <Instagram className="h-4 w-4 mr-2" />
                   @avicenaplus
-                </p>
+                </a>
               </div>
             </div>
           </div>
