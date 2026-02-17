@@ -161,20 +161,20 @@ export default function AvicenaPlusWebsite() {
       </header>
 
       {/* Hero Section */}
-      <section id="pocetna" className="bg-gradient-to-br from-blue-50 to-green-50 dark:from-blue-950 dark:to-green-950 py-20">
+      <section id="pocetna" className="bg-gradient-to-br from-blue-50 to-green-50 py-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100 dark:bg-blue-900 dark:text-slate-300 dark:hover:bg-blue-800">
+                <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100">
                   <Award className="h-4 w-4 mr-2" />
                   25 godina profesionalne usluge
                 </Badge>
-                <h1 className="text-5xl lg:text-6xl font-bold text-blue-900 dark:text-blue-100 leading-tight">
+                <h1 className="text-5xl lg:text-6xl font-bold text-blue-900 leading-tight">
                   Vaš pouzdan
-                  <span className="text-green-600 dark:text-green-400 block">zdravstveni partner</span>
+                  <span className="text-green-600 block">zdravstveni partner</span>
                 </h1>
-                <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="text-xl text-gray-600 leading-relaxed">
                   Služimo Novi Pazar profesionalnom farmaceutskom negom, stručnim zdravstvenim konsultacijama i
                   personalizovanom uslugom već više od dve decenije.
                 </p>
@@ -189,16 +189,16 @@ export default function AvicenaPlusWebsite() {
               </div>
               <div className="flex items-center space-x-8 pt-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-900 dark:text-blue-100">25+</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300">godina iskustva</div>
+                  <div className="text-3xl font-bold text-blue-900">25+</div>
+                  <div className="text-sm text-gray-600">godina iskustva</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600 dark:text-green-400">10K+</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300">zadovoljnih kupaca</div>
+                  <div className="text-3xl font-bold text-green-600">10K+</div>
+                  <div className="text-sm text-gray-600">zadovoljnih kupaca</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-900 dark:text-blue-100">2</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-300">lokacije</div>
+                  <div className="text-3xl font-bold text-blue-900">2</div>
+                  <div className="text-sm text-gray-600">lokacije</div>
                 </div>
               </div>
             </div>
