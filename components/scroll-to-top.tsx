@@ -17,13 +17,15 @@ export function ScrollToTop() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  if (!visible) return null
-
   return (
     <a
       href="#pocetna"
       aria-label="Nazad na vrh stranice"
-      className="fixed bottom-6 right-6 z-50 inline-flex h-11 w-11 items-center justify-center rounded-full bg-green-600 text-white shadow-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-background transition-colors"
+      className={`fixed bottom-5 right-5 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-600 text-white shadow-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-all duration-300 ${
+        visible
+          ? "translate-y-0 opacity-100 pointer-events-auto"
+          : "translate-y-4 opacity-0 pointer-events-none"
+      }`}
     >
       <ArrowUp className="h-5 w-5" />
     </a>

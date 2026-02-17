@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { SmoothScroll } from "@/components/smooth-scroll"
 import { Logo } from "@/components/logo"
 import { PharmacySlideshow } from "@/components/pharmacy-slideshow"
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import {
   Phone,
@@ -42,7 +42,7 @@ export default function AvicenaPlusWebsite() {
   ]
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <SmoothScroll />
       <ScrollToTop />
 
@@ -91,6 +91,9 @@ export default function AvicenaPlusWebsite() {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="right" className="w-64 sm:w-80">
+                  <SheetHeader className="sr-only">
+                    <SheetTitle>Navigacija</SheetTitle>
+                  </SheetHeader>
                   <div className="mt-8 space-y-6">
                     <div className="flex items-center space-x-3">
                       <Logo />
@@ -269,75 +272,75 @@ export default function AvicenaPlusWebsite() {
       </section>
 
       {/* Loyalty Card Program - Featured Section */}
-      <section id="loyalty" className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+      <section id="loyalty" className="py-12 sm:py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+        <div className="container mx-auto px-4 max-w-full overflow-hidden">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="space-y-6 sm:space-y-8">
               <div className="space-y-4">
                 <Badge className="bg-white/20 text-white hover:bg-white/20">
                   <Star className="h-4 w-4 mr-2" />
                   Ekskluzivne pogodnosti za članove
                 </Badge>
-                <h2 className="text-5xl font-bold leading-tight">
+                <h2 className="text-3xl sm:text-5xl font-bold leading-tight">
                   AvicenaPlus
                   <span className="block">Loyalty karta</span>
                 </h2>
-                <p className="text-xl text-green-100">
+                <p className="text-base sm:text-xl text-green-100">
                   Pridružite se hiljadama zadovoljnih kupaca i počnite da štedite na svakoj kupovini dok dobijate
                   ekskluzivne zdravstvene pogodnosti.
                 </p>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div className="flex items-start space-x-3">
-                  <div className="bg-white/20 p-2 rounded-lg">
+                  <div className="bg-white/20 p-2 rounded-lg shrink-0">
                     <Percent className="h-6 w-6" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Do 15% popusta</h3>
-                    <p className="text-green-100">Na sve lekove na recept i bez recepta</p>
+                    <p className="text-green-100 text-sm sm:text-base">Na sve lekove na recept i bez recepta</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-3">
-                  <div className="bg-white/20 p-2 rounded-lg">
+                  <div className="bg-white/20 p-2 rounded-lg shrink-0">
                     <Gift className="h-6 w-6" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Bonus poeni</h3>
-                    <p className="text-green-100">Zarađujte poene na svakoj kupovini</p>
+                    <p className="text-green-100 text-sm sm:text-base">Zarađujte poene na svakoj kupovini</p>
                   </div>
                 </div>
               </div>
 
-              <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold">
-                <CreditCard className="h-5 w-5 mr-2" />
+              <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 px-4 sm:px-8 py-3 sm:py-4 text-sm sm:text-lg font-semibold w-full sm:w-auto">
+                <CreditCard className="h-5 w-5 mr-2 shrink-0" />
                 Dobijte svoju kartu danas - besplatno je!
               </Button>
             </div>
 
-            <div className="relative">
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
-                <div className="bg-gradient-to-br from-white to-gray-100 p-8 rounded-xl shadow-2xl text-gray-900">
-                  <div className="flex justify-between items-start mb-6">
-                    <div>
-                      <h3 className="text-2xl font-bold text-blue-900">AvicenaPlus</h3>
-                      <p className="text-green-600 font-semibold">LOYALTY KARTA</p>
+            <div className="relative max-w-sm mx-auto lg:max-w-none w-full">
+              <div className="bg-white/10 backdrop-blur-sm p-3 sm:p-8 rounded-2xl">
+                <div className="bg-gradient-to-br from-white to-gray-100 p-4 sm:p-8 rounded-xl shadow-2xl text-gray-900">
+                  <div className="flex justify-between items-start mb-4 sm:mb-6">
+                    <div className="min-w-0">
+                      <h3 className="text-xl sm:text-2xl font-bold text-blue-900">AvicenaPlus</h3>
+                      <p className="text-green-600 font-semibold text-sm sm:text-base">LOYALTY KARTA</p>
                     </div>
-                    <div className="bg-blue-600 p-2 rounded-lg">
-                      <CreditCard className="h-6 w-6 text-white" />
+                    <div className="bg-blue-600 p-2 rounded-lg shrink-0">
+                      <CreditCard className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                     </div>
                   </div>
-                  <div className="space-y-4">
-                    <div className="text-2xl font-mono font-bold tracking-wider">**** **** **** 1234</div>
+                  <div className="space-y-3 sm:space-y-4">
+                    <div className="text-base sm:text-2xl font-mono font-bold tracking-wider">**** **** **** 1234</div>
                     <div className="flex justify-between">
                       <div>
                         <p className="text-xs text-gray-500 uppercase">Član od</p>
-                        <p className="font-semibold">01/2024</p>
+                        <p className="font-semibold text-sm sm:text-base">01/2024</p>
                       </div>
-                      <div>
+                      <div className="text-right">
                         <p className="text-xs text-gray-500 uppercase">Stanje poena</p>
-                        <p className="font-semibold text-green-600">2,450 poena</p>
+                        <p className="font-semibold text-green-600 text-sm sm:text-base">2,450 poena</p>
                       </div>
                     </div>
                   </div>
@@ -598,7 +601,7 @@ export default function AvicenaPlusWebsite() {
       {/* Footer / Kontakt sekcija */}
       <footer id="kontakt" className="bg-slate-800 text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="bg-green-600 p-2 rounded-lg">
