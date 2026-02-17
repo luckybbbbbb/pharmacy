@@ -4,9 +4,10 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
 import { SmoothScroll } from "@/components/smooth-scroll"
-import { ThemeToggle } from "@/components/theme-toggle"
 import { Logo } from "@/components/logo"
 import { PharmacySlideshow } from "@/components/pharmacy-slideshow"
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { ScrollToTop } from "@/components/scroll-to-top"
 import {
   Phone,
   Mail,
@@ -26,12 +27,12 @@ import {
   Calendar,
   Instagram,
   ExternalLink,
+  Menu,
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
 export default function AvicenaPlusWebsite() {
-  // WhatsApp slike apoteke
   const pharmacyImages = [
     "/WhatsApp Image 2025-09-27 at 16.09.02 (1).jpeg",
     "/WhatsApp Image 2025-09-27 at 16.09.02.jpeg", 
@@ -43,45 +44,114 @@ export default function AvicenaPlusWebsite() {
   return (
     <div className="min-h-screen bg-background">
       <SmoothScroll />
+      <ScrollToTop />
 
       {/* Header */}
       <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm border-b border-border sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-4">
             <div className="flex items-center space-x-3">
               <Logo />
-              <div>
-                <p className="text-sm text-green-600">25 godina poverenja</p>
-              </div>
             </div>
-            <nav className="hidden md:flex space-x-8">
-              <Link href="#pocetna" className="text-foreground hover:text-blue-600 font-medium transition-colors">
+
+            <nav className="hidden md:flex items-center space-x-8">
+              <a href="#pocetna" className="text-foreground hover:text-blue-600 font-medium transition-colors">
                 Početna
-              </Link>
-              <Link href="#o-nama" className="text-foreground hover:text-blue-600 font-medium transition-colors">
+              </a>
+              <a href="#o-nama" className="text-foreground hover:text-blue-600 font-medium transition-colors">
                 O nama
-              </Link>
-              <Link href="#loyalty" className="text-foreground hover:text-blue-600 font-medium transition-colors">
+              </a>
+              <a href="#loyalty" className="text-foreground hover:text-blue-600 font-medium transition-colors">
                 Loyalty karta
-              </Link>
-              <Link href="#usluge" className="text-foreground hover:text-blue-600 font-medium transition-colors">
+              </a>
+              <a href="#usluge" className="text-foreground hover:text-blue-600 font-medium transition-colors">
                 Usluge
-              </Link>
-              <Link href="#lokacije" className="text-foreground hover:text-blue-600 font-medium transition-colors">
+              </a>
+              <a href="#lokacije" className="text-foreground hover:text-blue-600 font-medium transition-colors">
                 Lokacije
-              </Link>
-              <Link href="#kontakt" className="text-foreground hover:text-blue-600 font-medium transition-colors">
+              </a>
+              <a href="#kontakt" className="text-foreground hover:text-blue-600 font-medium transition-colors">
                 Kontakt
-              </Link>
+              </a>
             </nav>
-            <div className="flex items-center space-x-4">
-              <ThemeToggle />
-              <Button asChild className="bg-green-600 hover:bg-green-700 text-white">
-                <Link href="#loyalty">
-                  <CreditCard className="h-4 w-4 mr-2" />
-                  Dobij Loyalty kartu
-                </Link>
-              </Button>
+
+            <div className="flex items-center space-x-2">
+
+
+              {/* Mobile hamburger menu */}
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="md:hidden"
+                    aria-label="Otvori navigaciju"
+                  >
+                    <Menu className="h-5 w-5" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-64 sm:w-80">
+                  <div className="mt-8 space-y-6">
+                    <div className="flex items-center space-x-3">
+                      <Logo />
+                      <div>
+                        <p className="text-sm text-green-600">25 godina poverenja</p>
+                      </div>
+                    </div>
+
+                    <nav className="flex flex-col space-y-4">
+                      <SheetClose asChild>
+                        <a
+                          href="#pocetna"
+                          className="text-lg font-medium text-foreground hover:text-blue-600 transition-colors"
+                        >
+                          Početna
+                        </a>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <a
+                          href="#o-nama"
+                          className="text-lg font-medium text-foreground hover:text-blue-600 transition-colors"
+                        >
+                          O nama
+                        </a>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <a
+                          href="#loyalty"
+                          className="text-lg font-medium text-foreground hover:text-blue-600 transition-colors"
+                        >
+                          Loyalty karta
+                        </a>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <a
+                          href="#usluge"
+                          className="text-lg font-medium text-foreground hover:text-blue-600 transition-colors"
+                        >
+                          Usluge
+                        </a>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <a
+                          href="#lokacije"
+                          className="text-lg font-medium text-foreground hover:text-blue-600 transition-colors"
+                        >
+                          Lokacije
+                        </a>
+                      </SheetClose>
+                      <SheetClose asChild>
+                        <a
+                          href="#kontakt"
+                          className="text-lg font-medium text-foreground hover:text-blue-600 transition-colors"
+                        >
+                          Kontakt
+                        </a>
+                      </SheetClose>
+                    </nav>
+                  </div>
+                </SheetContent>
+              </Sheet>
             </div>
           </div>
         </div>
@@ -108,10 +178,10 @@ export default function AvicenaPlusWebsite() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg">
-                  <Link href="#loyalty">
+                  <a href="#loyalty">
                     <CreditCard className="h-5 w-5 mr-2" />
                     Pridruži se Loyalty programu
-                  </Link>
+                  </a>
                 </Button>
               </div>
               <div className="flex items-center space-x-8 pt-4">
@@ -525,8 +595,8 @@ export default function AvicenaPlusWebsite() {
 
 
 
-      {/* Footer */}
-      <footer className="bg-slate-800 text-white py-12">
+      {/* Footer / Kontakt sekcija */}
+      <footer id="kontakt" className="bg-slate-800 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
@@ -548,24 +618,24 @@ export default function AvicenaPlusWebsite() {
               <h4 className="font-bold mb-4">Brzi linkovi</h4>
               <ul className="space-y-2 text-slate-300">
                 <li>
-                  <Link href="#o-nama" className="hover:text-white">
+                  <a href="#o-nama" className="hover:text-white">
                     O nama
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="#usluge" className="hover:text-white">
+                  <a href="#usluge" className="hover:text-white">
                     Usluge
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="#loyalty" className="hover:text-white">
+                  <a href="#loyalty" className="hover:text-white">
                     Loyalty program
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link href="#lokacije" className="hover:text-white">
+                  <a href="#lokacije" className="hover:text-white">
                     Lokacije
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
