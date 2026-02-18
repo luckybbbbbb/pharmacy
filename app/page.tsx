@@ -62,7 +62,7 @@ export default function AvicenaPlusWebsite() {
                 O nama
               </a>
               <a href="#loyalty" className="text-foreground hover:text-blue-600 font-medium transition-colors">
-                Loyalty karta
+                Loyalty kartica
               </a>
               <a href="#usluge" className="text-foreground hover:text-blue-600 font-medium transition-colors">
                 Usluge
@@ -124,7 +124,7 @@ export default function AvicenaPlusWebsite() {
                           href="#loyalty"
                           className="text-lg font-medium text-foreground hover:text-blue-600 transition-colors"
                         >
-                          Loyalty karta
+                          Loyalty kartica
                         </a>
                       </SheetClose>
                       <SheetClose asChild>
@@ -168,7 +168,7 @@ export default function AvicenaPlusWebsite() {
               <div className="space-y-4">
                 <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100">
                   <Award className="h-4 w-4 mr-2" />
-                  25 godina profesionalne usluge
+                  25 godina usluge
                 </Badge>
                 <h1 className="text-5xl lg:text-6xl font-bold text-blue-900 leading-tight">
                   Vaš pouzdan
@@ -283,7 +283,7 @@ export default function AvicenaPlusWebsite() {
                 </Badge>
                 <h2 className="text-3xl sm:text-5xl font-bold leading-tight">
                   AvicenaPlus
-                  <span className="block">Loyalty karta</span>
+                  <span className="block">Loyalty kartica</span>
                 </h2>
                 <p className="text-base sm:text-xl text-green-100">
                   Pridružite se hiljadama zadovoljnih kupaca i počnite da štedite na svakoj kupovini dok dobijate
@@ -355,7 +355,7 @@ export default function AvicenaPlusWebsite() {
       <section id="usluge" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-blue-900 mb-4">Profesionalne usluge</h2>
+            <h2 className="text-4xl font-bold text-blue-900 mb-4">Naše usluge</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Sveobuhvatna farmaceutska nega i zdravstvene usluge prilagođene vašim potrebama
             </p>
