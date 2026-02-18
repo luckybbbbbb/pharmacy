@@ -80,7 +80,7 @@ export function PharmacySlideshow({
       <div className="relative overflow-hidden rounded-2xl shadow-2xl w-full h-[400px] sm:h-[500px] lg:h-[600px]">
         <Image
           src={images[currentIndex]}
-          alt={`Apoteka slika ${currentIndex + 1}`}
+          alt={`AvicenaPlus apoteka Novi Pazar - enterijer i proizvodi ${currentIndex + 1}`}
           fill
           className="object-cover transition-transform duration-500 ease-in-out"
           priority={currentIndex === 0}
